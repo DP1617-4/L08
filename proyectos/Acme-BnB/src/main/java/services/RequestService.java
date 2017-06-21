@@ -1,6 +1,7 @@
 
 package services;
 
+import java.util.ArrayList;
 import java.util.Collection;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -182,7 +183,6 @@ public class RequestService {
 			aux += d;
 		}
 		result[0] = aux / unprocessedAverage.length;
-
 		unprocessedAverage = requestRepository.findAverageByPropertyWithoutInvoice();
 		aux = 0.0;
 		for (Double d : unprocessedAverage) {

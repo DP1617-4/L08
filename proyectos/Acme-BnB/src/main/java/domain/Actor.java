@@ -23,9 +23,9 @@ import security.UserAccount;
 
 @Entity
 @Access(AccessType.PROPERTY)
-@Table(indexes = {
-	@Index(columnList = "userAccount_id")
-})
+//@Table(indexes = {
+//	@Index(columnList = "userAccount_id")
+//})
 public class Actor extends Commentable {
 
 	// Constructors -----------------------------------------------------------

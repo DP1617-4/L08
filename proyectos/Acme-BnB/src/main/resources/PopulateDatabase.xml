@@ -29,7 +29,7 @@
 			</list>
 		</property>
 	</bean>
-<!--  	
+  	
 	<bean id="userAccount2" class="security.UserAccount">
 		<property name="username" value="admin2" />
 		<property name="password" value="c84258e9c39059a89ab77d846ddab909" />
@@ -41,9 +41,9 @@
 			</list>
 		</property>
 	</bean>
--->
+
 	<!-- LESSOR -->
-	<!--  
+	
 	<bean id="userAccount3" class="security.UserAccount">
 		<property name="username" value="lessor1" />
 		<property name="password" value="5b61d56842232fc77308dbd3e99d99d4" />
@@ -79,9 +79,9 @@
 			</list>
 		</property>
 	</bean>
-	 -->
+	
 	<!-- TENANT -->
-	<!--
+	
 	<bean id="userAccount6" class="security.UserAccount">
 		<property name="username" value="tenant1" />
 		<property name="password" value="febe027753c1e6ce9acdbbd9c80a8407" />
@@ -117,9 +117,9 @@
 			</list>
 		</property>
 	</bean>
-	  -->
+	
 	<!-- AUDITOR -->
-	<!--  
+	  
 	<bean id="userAccount9" class="security.UserAccount">
 		<property name="username" value="auditor1" />
 		<property name="password" value="175d2e7a63f386554a4dd66e865c3e14" />
@@ -155,7 +155,7 @@
 			</list>
 		</property>
 	</bean>
-	-->
+
 <!-- DESDE AQUÍ VAN LAS DEMÁS CLASES -->
 	<!-- ADMIN -->
 	<bean id="admin1" class="domain.Administrator">
@@ -166,7 +166,7 @@
 		<property name="picture" value="http://www.bouncepen.com/wp-content/themes/twentyfifteen/uploads/user-photo/dummy-image.png" />
 		<property name="userAccount" ref="userAccount1" />
 	</bean>
-<!--  
+  
 	<bean id="admin2" class="domain.Administrator">
 		<property name="name" value="Administrador" />
 		<property name="surname" value="2" />
@@ -175,10 +175,10 @@
 		<property name="picture" value="http://www.bouncepen.com/wp-content/themes/twentyfifteen/uploads/user-photo/dummy-image.png" />
 		<property name="userAccount" ref="userAccount2" />
 	</bean>
-	-->
+
 	<!-- CREDITCARD -->
 	<!-- Hay 6 creditCards: 3 para los 3 Lessors y otras 3 para los 3 Tenants (estan ordenadas) -->
-	<!--  
+  
 	<bean id="creditCard1" class="domain.CreditCard">
 		<property name="holderName" value="Eduardo"/>
 		<property name="brandName" value="VISA"/>
@@ -232,9 +232,9 @@
 		<property name="expirationYear" value="21"/>
 		<property name="CVV" value="987"/>
 	</bean>
-	-->
+	
 	<!-- LESSOR -->
-	<!--  
+	  
 	<bean id="lessor1" class="domain.Lessor">
 		<property name="name" value="Eduardo" />
 		<property name="surname" value="Gómez" />
@@ -284,10 +284,8 @@
 		</property>
 	</bean>
 	
-	
-	-->
 	<!-- TENANT -->
-	<!-- 
+	 
 	<bean id="tenant1" class="domain.Tenant">
 		<property name="name" value="Ale" />
 		<property name="surname" value="Sánchez" />
@@ -314,10 +312,10 @@
 		<property name="picture" value="http://blog.suny.edu/wp-content/uploads/2014/03/Cara-Friedman.jpeg" />
 		<property name="userAccount" ref="userAccount8" />
 	</bean>
-	 -->
+	
 	<!-- FINDER -->
 	<!-- Hay 3 finders, uno por cada tenant (en orden) -->
-	<!--  
+	  
 	<bean id="finder1" class="domain.Finder">
 		<property name="destinationCity" value="Sevilla"/> 
 		<property name="minimumPrice" value="7.0"/>
@@ -356,9 +354,9 @@
 		</property>
 		<property name="tenant" ref="tenant3" />
 	</bean>
-	-->
+	
 	<!-- AUDITOR -->
-	<!--  
+	  
 	<bean id="auditor1" class="domain.Auditor">
 		<property name="name" value="Ignacio" />
 		<property name="surname" value="Vargas" />
@@ -388,11 +386,11 @@
 		<property name="companyName" value="FISA"/>
 		<property name="userAccount" ref="userAccount11" />
 	</bean>
-	-->
+	
 	<!-- ATTRIBUTE -->
 	<!-- Hay 3 propiedades, por lo tanto tiene que haber 15 Attributes: Country, Province, State, City y Capacity (estan ordenadas) -->
 		<!-- ATTRIBUTE de la PROPERTY 1 -->
-		<!-- 
+		 
 	<bean id="attribute1" class="domain.Attribute">
 		<property name="attributeName" value="Country"/> 
 		<property name="values">
@@ -432,10 +430,10 @@
 			</list>
 		</property>
 	</bean>
-	 -->
+	
 	<!-- PROPERTY -->
 	<!-- Hay 3 propiedades: Las 2 primeras del primer Lessor, y la otra del segundo. El tercer Lessor no tiene ninguna propiedad -->
-	<!-- 
+	
 	<bean id="property1" class="domain.Property">
 		<property name="name" value="Eduardo Home"/> 
 		<property name="rate" value="12.0"/>
@@ -507,9 +505,9 @@
 			</list>
 		</property>
 	</bean>
-	 -->
+	
 	<!-- Values -->
-	<!--  
+	  
 	<bean id="countryValue1" class="domain.Value">
 		<property name="content" value="Spain"/>
 		<property name="attribute" ref="attribute1"/>
@@ -539,9 +537,9 @@
 		<property name="attribute" ref="attribute5"/>
 		<property name="property" ref="property1"/>
 	</bean>
-	-->
+	
 		<!-- Values de la PROPERTY 2 -->
-		<!--  
+		 
 	<bean id="countryValue2" class="domain.Value">
 		<property name="content" value="Spain"/>
 		<property name="attribute" ref="attribute1"/>
@@ -571,9 +569,9 @@
 		<property name="attribute" ref="attribute5"/>
 		<property name="property" ref="property2"/>
 	</bean>
-		-->
+		
 		<!-- Value de la PROPERTY 3 -->
-		<!--  
+		  
 	<bean id="countryValue3" class="domain.Value">
 		<property name="content" value="United State of America"/>
 		<property name="attribute" ref="attribute1"/>
@@ -604,12 +602,10 @@
 		<property name="property" ref="property3"/>
 	</bean>
 	
-	
-	-->
 	<!-- REQUEST -->
 	<!-- Las 3 primeras son las que si se alquilaron (estan en ACCEPTED) -->
 	<!-- Las property1 tendra request1 y 5. Property2 tendra request2 y 4, y Property3 tendra la 3 y 6-->
-	<!--  
+	  
 	<bean id="request1" class="domain.Request">
 		<property name="checkInDate" value="2017/01/01" />
 		<property name="checkOutDate" value="2017/01/02" />
@@ -669,10 +665,10 @@
 		<property name="tenant" ref="tenant3"/>
 		<property name="property" ref="property3"/>
 	</bean>
-	-->
+	
 	<!-- INVOICE -->
 	<!-- Hay 3 facturas, una por cada tenant -->
-	<!--  
+	  
 	<bean id="invoice1" class="domain.Invoice">
 		<property name="moment" value="2017/01/02"/> 
 		<property name="VATNumber" value="B41369871"/>
@@ -702,11 +698,11 @@
 		<property name="creditCardCopy" ref="creditCard6"/>
 		<property name="request" ref="request3" />
 	</bean>
-	-->
+	
 	<!-- AUDIT -->
 	<!-- Hay 3 auditors: El primero hace 2 audits, el segundo 1 y el tercero ninguna. -->
 	<!-- Hay 3 audits: Una para cada property (en orden). -->
-	<!--  
+	  
 	<bean id="audit1" class="domain.Audit">
 		<property name="moment" value="2017/01/26" />
 		<property name="text" value="Accomplished with all requirements." />
@@ -733,10 +729,10 @@
 		<property name="auditor" ref="auditor2"/>
 		<property name="property" ref="property3"/>
 	</bean>
-	-->
+	
 	<!-- SOCIAL IDENTITY -->
 	<!-- Tienen el primer Lessor, el primer Tenant y el primer Auditor (en orden). -->
-	<!--  
+	  
 	<bean id="socialIdentity1" class="domain.SocialIdentity">
 		<property name="nick" value="Marth"/> 
 		<property name="socialNetworkName" value="Marth01"/> 
@@ -757,7 +753,7 @@
 		<property name="socialNetworkLink" value="https://twitter.com/nachoMan"/>
 		<property name="actor" ref="auditor1"/>
 	</bean>
-	-->
+	
 	<!-- SYSTEM CONFIG (Solo tendremos 1 configuracion) -->
 	<bean id="systemConfiguration" class="domain.SystemConfiguration">
 		<property name="fee" value="1.0"/>
@@ -767,7 +763,7 @@
 	<!-- COMMENT -->
 	<!-- Hay 2 comentarios: Uno sobre la 1 request en ACCEPTED. -->
 	<!-- El siguiente es un Lessor hablándose a si mismo, y el último un Tenant que hace lo mismo. -->
-	<!--  
+	  
 	<bean id="comment1" class="domain.Comment">
 		<property name="title" value="Bonita casa." />
 		<property name="text" value="Me ha encantado el lugar y la decoración de la casa." />
@@ -803,7 +799,7 @@
 		<property name="actor" ref="tenant1"/>
 		<property name="commentable" ref="tenant1"/>
 	</bean>
-	-->
+	
 	<!-- FALTA: Encriptar las pass. Comments. -->
 	
 </beans>

@@ -15,9 +15,9 @@ import org.hibernate.validator.constraints.NotBlank;
 
 @Entity
 @Access(AccessType.PROPERTY)
-@Table(indexes = {
-	@Index(columnList = "attributeName")
-})
+//@Table(indexes = {
+//	@Index(columnList = "attributeName")
+//})
 public class Attribute extends DomainEntity {
 
 	//Constructor

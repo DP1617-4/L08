@@ -28,10 +28,10 @@ public interface RequestRepository extends JpaRepository<Request, Integer> {
 	@Query("select count(ra)*1.0/(select count(l)*1.0 from Lessor l) from Request ra where ra.status='DENIED'")
 	Double findAverageDeniedPerLessor();
 
-	@Query("select count(r)*1.0/(select count(p)*1.0 from Property p where p.audits.size > 0) from Request r where r.property.audits.size > 0 group by r.property")
+	@Query("select case when (select count(p)*1.0 from Property p where p.audits.size > 0) = 0 then 0.0 else (count(r)*1.0/(select count(p)*1.0 from Property p where p.audits.size > 0)) end from Request r where r.property.audits.size > 0 group by r.property")
 	Double[] findAverageByPropertyWithInvoice();
 
-	@Query("select count(r)*1.0/(select count(p)*1.0 from Property p where p.audits.size = 0) from Request r where r.property.audits.size = 0 group by r.property")
+	@Query("select case when (select count(p)*1.0 from Property p where p.audits.size = 0) = 0 then 0.0 else (count(r)*1.0/(select count(p)*1.0 from Property p where p.audits.size = 0)) end from Request r where r.property.audits.size = 0 group by r.property")
 	Double[] findAverageByPropertyWithoutInvoice();
 
 }
